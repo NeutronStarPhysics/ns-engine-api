@@ -7,10 +7,10 @@ help:
 	@echo -e 'run \t\t - \t Executes script'
 
 run: 
-	uvicorn --app-dir ./src/ ns_engine_api.main:app
+	uvicorn --app-dir ./src/ --log-config=./src/ns_engine_api/log_conf.yaml ns_engine_api.main:app
 
 runr: 
-	uvicorn --reload --app-dir ./src/ ns_engine_api.main:app
+	uvicorn --reload --app-dir ./src/ --log-config=./src/ns_engine_api/log_conf.yaml ns_engine_api.main:app
 
 st: 
 	./tests/smoketest.sh
