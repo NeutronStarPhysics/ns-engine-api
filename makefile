@@ -11,3 +11,6 @@ run:
 
 runr: 
 	uvicorn --reload --app-dir ./src/ ns_engine_api.main:app
+
+st: 
+	./tests/smoketest.sh
