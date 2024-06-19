@@ -18,3 +18,4 @@
 - https://realpython.com/dependency-management-python-poetry/
 - https://github.com/iam-abbas/FastAPI-Production-Boilerplate
 - https://www.linkedin.com/pulse/bridging-worlds-nodejs-developers-guide-python-poetry-manoj-mukherjee-njkmc#:~:text=Poetry%20in%20Python%3A%20Poetry%20is,easy%20to%20create%20robust%20applications.
+- https://fastapi.tiangolo.com/tutorial/bigger-applications/
