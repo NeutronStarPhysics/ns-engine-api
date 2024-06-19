@@ -14,3 +14,7 @@ runr:
 
 st: 
 	./tests/smoketest.sh
+
+actuatorui:
+	docker run --rm --name spring-boot-admin -p 8080:8080 michayaak/spring-boot-admin:2.2.3-1
+

@@ -27,20 +27,25 @@ execute_test()
 
     if [ "$METHOD" == "GET" ]
     then
-        curl -v ${METHOD} ${URL}
+        curl -X ${METHOD} ${URL}
     else
-        curl -v ${METHOD} -H "Content-Type: application/json" -d "${PAYLOAD}" ${URL}
+        curl -X ${METHOD} -H "Content-Type: application/json" -d "${PAYLOAD}" ${URL}
     fi
     echo -e "\n-----------------------------------------------------------------"
 }
 
-# execute_test GET ${BASE_URL}
 
-# # execute request - trailing slash
-# execute_test POST ${BASE_URL}/execute/ "Execute request - trailing slash" '{ "id": "'"$(dbus-uuidgen)"'", "algorithm": "tov_solver" }'
+
+
+execute_test GET ${BASE_URL}/ "Main"
+execute_test GET ${BASE_URL}/live "Live"
+
+# execute request - trailing slash
+execute_test POST ${BASE_URL}/execute/ "Execute request - trailing slash" '{ "id": "'"$(dbus-uuidgen)"'", "algorithm": "tov_solver" }'
 
 # # execute request - non trailing slash
 # execute_test POST ${BASE_URL}/execute "Execute request - non trailing slash" '{ "id": "'"$(dbus-uuidgen)"'", "algorithm": "tov_solver" }'
 
 # execute request - non trailing slash
-execute_test POST ${BASE_URL}/execute "Execute request - TOV" '{ "id": "'"$(dbus-uuidgen)"'", "algorithm": "tov_solver" }'
+# execute_test POST ${BASE_URL}/execute "Execute request - TOV" '{ "id": "'"$(dbus-uuidgen)"'", "algorithm": "tov_solver" }'
+

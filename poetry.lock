@@ -454,6 +454,26 @@ files = [
 ]
 
 [[package]]
+name = "pyctuator"
+version = "1.2.0"
+description = "A Python implementation of the Spring Actuator API for popular web frameworks"
+optional = false
+python-versions = ">=3.9,<4.0"
+files = [
+    {file = "pyctuator-1.2.0-py3-none-any.whl", hash = "sha256:372757d3f8b3dcd9c0be2b3baae6a41d806f0a11f190e2a626f35076c1adb71a"},
+    {file = "pyctuator-1.2.0.tar.gz", hash = "sha256:c225fe04a508cf5e95efff3aaf413e1e9a3abf3e6d5234e1b510e1454ead17b5"},
+]
+
+[package.extras]
+aiohttp = ["aiohttp (>=3.6.2,<4.0.0)"]
+db = ["PyMySQL (>=1.0.2,<2.0.0)", "cryptography (>=39.0.1,<40.0.0)", "sqlalchemy (>=2.0.4,<3.0.0)"]
+fastapi = ["fastapi (>=0.100.1,<0.101.0)", "uvicorn (>=0.23.0,<0.24.0)"]
+flask = ["flask (>=2.3.0,<3.0.0)"]
+psutil = ["psutil (>=5.6,<6.0)"]
+redis = ["redis (>=4.3.4,<5.0.0)"]
+tornado = ["tornado (>=6.0.4,<7.0.0)"]
+
+[[package]]
 name = "pydantic"
 version = "2.7.4"
 description = "Data validation using Python type hints"
@@ -1078,4 +1098,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "97e45b09f405487675ec41706e75ab1f7bc6a193dca468bf7cc49a2de34deb13"
+content-hash = "9ade2374951d56ac41f97cf4b61599d359ed7c92689a583807e4dbe04191ad99"

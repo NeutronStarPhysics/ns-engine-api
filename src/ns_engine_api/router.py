@@ -1,7 +1,8 @@
+import logging
 from fastapi import FastAPI
+
 from .domain.request import ExecutionRequest
 from .algorithms.tov_solver.main import TOV_Solver
-import logging
 
 logger = logging.getLogger(__name__)
 
